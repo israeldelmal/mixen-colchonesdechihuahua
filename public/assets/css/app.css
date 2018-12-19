@@ -1,0 +1,1309 @@
+@font-face {
+	font-family: Century;
+	src        : url('../fonts/century/gothic.ttf');
+	font-weight: 100;
+}
+
+@font-face {
+	font-family: Century;
+	src        : url('../fonts/century/gothic-bold.ttf');
+	font-weight: 200;
+}
+
+
+@font-face {
+	font-family: Bold;
+	src        : url('../fonts/bold/bold.ttf');
+	font-weight: 200;
+}
+
+* {
+	font-family: Century;
+	font-weight: lighter;
+	margin     : 0px;
+	padding    : 0px;
+	box-sizing : border-box;
+	outline    : none;
+}
+
+img {
+	display: block;
+}
+
+a {
+	display   : inline-block;
+	transition: all 0.3s ease-out;
+}
+
+body {
+	width           : 100%;
+	background-color: rgb(255, 255, 255);
+	color           : rgb(0, 0, 0);
+}
+
+	body > a {
+		display         : flex;
+		align-items     : center;
+		justify-content : center;
+		width           : 60px;
+		height          : 60px;
+		border-radius   : 50%;
+		background-color: rgb(0, 179, 59);
+		color           : rgb(255, 255, 255);
+		position        : fixed;
+		bottom          : 40px;
+		right           : 40px;
+		text-decoration : none;
+		z-index         : 120;
+		font-size       : 1.75em;
+	}
+
+	body > a:hover {
+		background-color: rgb(21, 93, 45);
+	}
+
+	body > button {
+		width           : 32px;
+		background-color: transparent;
+		border          : none;
+		position        : fixed;
+		top             : 32px;
+		left            : 32px;
+		z-index         : 150;
+		display         : none;
+	}
+
+		body > button > span {
+			display         : block;
+			width           : 100%;
+			height          : 1px;
+			background-color: rgb(255, 255, 255);
+			margin-bottom   : 2px;
+			box-shadow      : 0 0 3px rgba(0, 0, 0, 0.5);
+			transition      : all 0.3s ease-out;
+		}
+
+		body > button > span:last-of-type {
+			margin-bottom: 0px;
+		}
+
+		.active-button {
+			margin-bottom: 6px;
+		}
+
+		.active-button:last-of-type {
+			margin-bottom: 0px;
+		}
+
+	body > nav {
+		width           : 100%;
+		height          : 100px;
+		display         : flex;
+		align-items     : center;
+		justify-content : center;
+		background-color: rgb(255, 255, 255);
+		box-shadow      : 0 0 3px rgba(0, 0, 0, 0.35);
+		position        : fixed;
+		top             : 0px;
+		left            : 0px;
+		z-index         : 100;
+		transition      : all 0.3s ease-out;
+	}
+
+	.active-nav {
+		margin-top: 0px;
+	}
+
+		body > nav > div {
+			width          : 80%;
+			display        : flex;
+			flex-flow      : row wrap;
+			justify-content: space-between;
+		}
+
+			body > nav > div > a {
+				height: 50px;
+			}
+
+				body > nav > div > a > img {
+					height: 100%;
+				}
+
+			body > nav > div > ul {
+				list-style     : none;
+				display        : flex;
+				align-items    : center;
+				justify-content: center;
+			}
+
+				body > nav > div > ul > li {
+					display     : inline-block;
+					margin-right: 10px;
+				}
+
+				body > nav > div > ul > li:last-of-type {
+					margin-right: 0px;
+				}
+
+					body > nav > div > ul > li > a {
+						text-transform : uppercase;
+						padding        : 8px 16px;
+						border-radius  : 16px;
+						text-decoration: none;
+						color          : rgb(0, 0, 0);
+						border         : 1px solid rgb(255, 255, 255);
+					}
+
+					body > nav > div > ul > li > a:hover {
+						border: 1px solid rgb(231, 244, 241);
+					}
+
+					body > nav > div > ul > li:last-of-type > a {
+						font-size: 1.75em;
+						border   : none;
+						color    : rgb(8, 216, 242);
+						padding  : 0px;
+					}
+
+					body > nav > div > ul > li:last-of-type > a:hover {
+						border: none;
+						color : rgb(36, 118, 118);
+					}
+
+	body > header {
+		width              : 100%;
+		height             : 85vh;
+		background-color   : rgb(0, 0, 0);
+		background-size    : cover;
+		background-position: center;
+		display            : flex;
+		align-items        : center;
+		justify-content    : center;
+	}
+
+		body > header > div {
+			width         : 80%;
+			display       : flex;
+			align-items   : flex-start;
+			flex-direction: column;
+		}
+
+			body > header > div > h1 {
+				font-family  : Bold;
+				white-space  : pre-line;
+				margin-bottom: 40px;
+				font-size    : 3.5em;
+				line-height  : 1em;
+				margin-top   : 100px;
+			}
+
+				body > header > div > h1 > strong {
+					font-family: Bold;
+					font-size  : 1.25em;
+					line-height: 1em;
+				}
+
+			body > header > div > span {
+				font-size    : 1.25em;
+				display      : inline-block;
+				margin-bottom: 8px;
+			}
+
+			body > header > div > span:last-of-type {
+				margin-bottom: 0px;
+			}
+
+				body > header > div > span > strong {
+					color: rgb(234, 0, 0);
+				}
+
+#logos {
+	width          : 100%;
+	padding        : 20px 0px;
+	display        : flex;
+	align-items    : center;
+	justify-content: center;
+}
+
+	#logos > div {
+		width          : 50%;
+		display        : flex;
+		flex-flow      : row wrap;
+		justify-content: space-between;
+		align-items    : center;
+	}
+
+		#logos > div > div {
+			width: 18%;
+		}
+
+			#logos > div > div > img {
+				width: 100%;
+			}
+
+#nosotros {
+	width              : 100%;
+	background-image   : url('../images/nosotros/fondo.jpg');
+	background-repeat  : no-repeat;
+	background-size    : 60% 95%;
+	background-position: right;
+}
+
+	#nosotros > div {
+		width : 80%;
+		margin: auto;
+	}
+
+		#nosotros > div > div {
+			width           : 40%;
+			background-color: rgb(128, 255, 255);
+			border-radius   : 12px;
+			padding         : 40px;
+		}
+
+			#nosotros > div > div > h1 {
+				font-family   : Bold;
+				text-transform: uppercase;
+				white-space   : pre-line;
+				font-size     : 2.5em;
+				margin-bottom : 32px;
+				color         : rgba(0, 0, 0, 0.5);
+				line-height   : 1em;
+			}
+
+				#nosotros > div > div > h1 > span {
+					font-family: Bold;
+					color      : rgb(0, 0, 0);
+				}
+
+			#nosotros > div > div > p {
+				text-align   : justify;
+				margin-bottom: 32px;
+			}
+
+			#nosotros > div > div > p:last-of-type {
+				margin-bottom: 0px;
+			}
+
+			#nosotros > div > div > div {
+				display        : flex;
+				align-items    : center;
+				justify-content: center;
+				margin-top     : 32px;
+			}
+
+				#nosotros > div > div > div > a {
+					font-family     : Bold;
+					display         : inline-block;
+					padding         : 16px 32px;
+					text-transform  : uppercase;
+					border-radius   : 6px;
+					background-color: rgb(171, 240, 37);
+					text-decoration : none;
+					color           : rgb(0, 0, 0);
+					font-size       : 0.85em;
+				}
+
+				#nosotros > div > div > div > a:hover {
+					background-color: rgb(95, 124, 37);
+				}
+
+#tecnologias {
+	width          : 100%;
+	padding        : 80px 0px;
+	display        : flex;
+	align-items    : center;
+	justify-content: center;
+	position       : relative;
+}
+
+	#tecnologias > ol {
+		list-style     : none;
+		display        : flex;
+		align-items    : center;
+		justify-content: center;
+		flex-direction : column;
+		position       : absolute;
+		right          : 80px;
+	}
+
+		#tecnologias > ol > li {
+			margin-bottom: 8px;
+		}
+
+		#tecnologias > ol > li:last-of-type {
+			margin-bottom: 0px;
+		}
+
+			#tecnologias > ol > li > a {
+				display         : block;
+				width           : 20px;
+				height          : 20px;
+				border-radius   : 50%;
+				background-color: rgb(220, 220, 220);
+			}
+
+			#tecnologias > ol > li > a:hover {
+				background-color: rgb(128, 255, 255);
+			}
+
+			#tecnologias > ol > li > .active {
+				background-color: rgb(128, 255, 255);
+			}
+
+	#tecnologias > div {
+		width   : 100%;
+		overflow: hidden;
+	}
+
+		#tecnologias > div > div {
+			width          : 100%;
+			display        : none;
+			align-items    : center;
+			flex-flow      : row wrap;
+			justify-content: space-between;
+		}
+
+		#tecnologias > div > .active {
+			display: flex;
+		}
+			#tecnologias > div > div > div {
+				width  : 50%;
+			}
+
+				#tecnologias > div > div > div:first-of-type > img {
+					width: 100%;
+				}
+
+			#tecnologias > div > div > div:last-of-type {
+				padding        : 40px 160px 40px 40px;
+				display        : flex;
+				align-items    : center;
+				justify-content: center;
+				flex-direction : column;
+			}
+
+				#tecnologias > div > div > div:last-of-type > div {
+					width        : 25%;
+					margin-bottom: 16px;
+				}
+
+					#tecnologias > div > div > div:last-of-type > div > img {
+						width: 100%;
+					}
+
+				#tecnologias > div > div > div:last-of-type > h3 {
+					font-family   : Bold;
+					text-transform: uppercase;
+					text-align    : center;
+					font-size     : 2em;
+					white-space   : pre-line;
+					margin-bottom : 16px;
+					color         : rgb(183, 183, 183);
+				}
+
+					#tecnologias > div > div > div:last-of-type > h3 > span {
+						font-family: Bold;
+						color      : rgb(0, 0, 0);
+					}
+
+				#tecnologias > div > div > div:last-of-type > p {
+					text-align   : justify;
+					margin-bottom: 16px;
+				}
+
+				#tecnologias > div > div > div:last-of-type > ul {
+					width          : 100%;
+					display        : flex;
+					flex-flow      : row wrap;
+					justify-content: center;
+					list-style     : none;
+				}
+
+					#tecnologias > div > div > div:last-of-type > ul > li {
+						margin-right: 8px;
+					}
+
+					#tecnologias > div > div > div:last-of-type > ul > li:last-of-type {
+						margin-right: 0px;
+					}
+
+						#tecnologias > div > div > div:last-of-type > ul > li > a {
+							font-family     : Bold;
+							background-color: rgb(128, 255, 255);
+							padding         : 16px 32px;
+							border-radius   : 6px;
+							text-decoration : none;
+							color           : rgb(0, 0, 0);
+						}
+
+						#tecnologias > div > div > div:last-of-type > ul > li > a:hover {
+							background-color: rgb(36, 118, 118);
+						}
+
+		#tecnologias > div > span {
+			display   : block;
+			width     : 100%;
+			text-align: center;
+			margin-top: 80px;
+			font-size : 0.85em;
+		}
+
+#techs {
+	width                : 100%;
+	padding              : 80px 0px;
+	background-size      : cover;
+	background-attachment: fixed;
+	position             : relative;
+	margin-top           : -21px;
+	z-index              : -5;
+	color                : rgb(255, 255, 255);
+}
+
+	#techs > div {
+		width : 80%;
+		margin: auto;
+	}
+
+		#techs > div > h2 {
+			display       : block;
+			font-family   : Bold;
+			text-transform: uppercase;
+			white-space   : pre-line;
+			font-size     : 2.5em;
+			margin-bottom : 32px;
+			line-height   : 1em;
+			text-align: center;
+		}
+
+		#techs > div > div {
+			width       : 100%;
+			column-count: 2;
+			column-gap  : 40px;
+			margin-top  : 40px;
+		}
+
+			#techs > div > div > p {
+				text-align: justify;
+				margin-top: 40px;
+			}
+
+			#techs > div > div > p:first-of-type {
+				margin-top: 0px;
+			}
+
+#productos {
+	width          : 100%;
+	display        : flex;
+	flex-flow      : row wrap;
+	justify-content: space-between;
+	padding        : 0px 32px 80px 32px;
+}
+
+	#productos > div:nth-of-type(1) {
+		width                : 100%;
+		height               : 400px;
+		background-image     : url('../images/productos/fondo.jpg');
+		background-size      : cover;
+		background-attachment: fixed;
+		display              : flex;
+		align-items          : center;
+		justify-content      : center;
+		margin-bottom        : 32px;
+		border-radius        : 12px;
+	}
+
+		#productos > div:nth-of-type(1) > img {
+			width: 35%;
+		}
+
+	#productos > div:nth-of-type(n+2) {
+		width: 49.25%;
+	}
+
+		#productos > div:nth-of-type(n+2) > img {
+			width        : 100%;
+			margin-bottom: 80px;
+			border-radius: 12px;
+		}
+
+		#productos > div:nth-of-type(n+2) > h3 {
+			font-family   : Bold;
+			text-align    : center;
+			white-space   : pre-line;
+			font-size     : 2em;
+			text-transform: uppercase;
+			margin-bottom : 16px;
+			color         : rgb(93, 138, 200);
+			line-height   : 1em;
+		}
+
+			#productos > div:nth-of-type(n+2) > h3 > span {
+				font-family: Bold;
+				color      : rgb(183, 183, 183);
+			}
+
+		#productos > div:nth-of-type(n+2) > p {
+			text-align   : justify;
+			margin-bottom: 16px;
+		}
+
+		#productos > div:nth-of-type(n+2) > div {
+			display        : flex;
+			align-items    : center;
+			justify-content: center;
+		}
+
+			#productos > div:nth-of-type(n+2) > div > a {
+				font-family     : Bold;
+				font-size       : 0.85em;
+				display         : inline-block;
+				padding         : 16px 32px;
+				text-transform  : uppercase;
+				border-radius   : 6px;
+				background-color: rgb(171, 240, 37);
+				text-decoration : none;
+				color           : rgb(0, 0, 0);
+			}
+
+			#productos > div:nth-of-type(n+2) > div > a:hover {
+				background-color: rgb(95, 124, 37);
+			}
+
+#contacto {
+	width: 100%;
+}
+
+	#contacto > map {
+		width  : 100%;
+		height : 350px;
+		display: block;
+	}
+
+	#contacto > div {
+		width          : 80%;
+		padding        : 80px 0px;
+		margin         : auto;
+		display        : flex;
+		align-items    : center;
+		justify-content: center;
+		flex-direction : column;
+		position       : relative;
+	}
+
+	#contacto > div:before {
+		content         : '';
+		height          : 80%;
+		width           : 1px;
+		background-color: rgb(0, 0, 0);
+		position        : absolute;
+		left            : 0px;
+		top             : 0px;
+	}
+
+		#contacto > div > h1 {
+			font-family   : Bold;
+			text-align    : center;
+			font-size     : 2em;
+			text-transform: uppercase;
+		}
+
+		#contacto > div > sub {
+			text-align    : center;
+			font-size     : 2em;
+			text-transform: uppercase;
+			margin-bottom : 40px;
+		}
+
+		#contacto > div > div {
+			width          : 100%;
+			display        : flex;
+			flex-flow      : row wrap;
+			justify-content: space-between;
+		}
+
+			#contacto > div > div > ul {
+				width       : 50%;
+				list-style  : none;
+				padding-left: 32px;
+			}
+
+				#contacto > div > div > ul > li {
+					display       : block;
+					margin-bottom : 8px;
+					text-transform: uppercase;
+				}
+
+					#contacto > div > div > ul > li > a {
+						font-weight    : bold;
+						display        : inline-block;
+						color          : rgb(0, 0, 0);
+						text-decoration: none;
+						text-transform : uppercase;
+					}
+
+					#contacto > div > div > ul > li > a:hover {
+						color: rgb(128, 255, 255);
+					}
+
+					#contacto > div > div > ul > li:last-of-type > a {
+						font-weight: 200;
+						font-size  : 2em;
+						color      : rgb(8, 216, 242);
+					}
+
+					#contacto > div > div > ul > li:last-of-type > a:hover {
+						color: rgb(36, 118, 118);
+					}
+
+			#contacto > div > div > form {
+				width          : 50%;
+				display        : flex;
+				flex-flow      : row wrap;
+				justify-content: space-between;
+			}
+
+				#contacto > div > div > form > div {
+					width        : 49%;
+					margin-bottom: 16px;
+				}
+
+				#contacto > div > div > form > div:nth-of-type(n+5) {
+					width: 100%;
+				}
+
+				#contacto > div > div > form > div:last-of-type {
+					margin-bottom: 0px;
+				}
+
+					#contacto > div > div > form > div > input,
+					#contacto > div > div > form > div > textarea {
+						width           : 100%;
+						border          : none;
+						padding         : 12px;
+						border-radius   : 6px;
+						background-color: rgb(229, 229, 229);
+					}
+
+					#contacto > div > div > form > div > button {
+						font-family     : Bold;
+						font-size       : 0.85em;
+						width           : 100%;
+						padding         : 12px;
+						cursor          : pointer;
+						border-radius   : 6px;
+						background-color: rgb(128, 255, 255);
+						border          : none;
+						text-transform  : uppercase;
+						transition      : all 0.3s ease-out;
+					}
+
+					#contacto > div > div > form > div > button:hover {
+						background-color: rgb(36, 118, 118);
+					}
+
+					#contacto > div > div > form > div > div {
+						display         : none;
+						width           : 100%;
+						background-color: rgb(234, 0, 0);
+						padding         : 6px;
+						font-size       : 0.75em;
+						color           : rgb(255, 255, 255);
+						margin-top      : 4px;
+						border-radius   : 6px;
+					}
+
+					#contacto > div > div > form > figure {
+						display   : none;
+						width     : 100%;
+						margin-top: 16px;
+					}
+
+						#contacto > div > div > form > figure > img {
+							width : 40px;
+							margin: auto;
+						}
+
+	body > footer {
+		width              : 100%;
+		background-image   : url('../images/pie/fondo.jpg');
+		background-size    : cover;
+		background-position: center;
+	}
+
+		body > footer > div {
+			width: 100%;
+		}
+
+		body > footer > div:first-of-type {
+			padding        : 80px 0px;
+			display        : flex;
+			align-items    : center;
+			justify-content: center;
+		}
+
+			body > footer > div:first-of-type > img {
+				width: 32%;
+			}
+
+		body > footer > div:last-of-type {
+			padding         : 16px 0px;
+			text-align      : center;
+			background-color: rgba(128, 255, 255, 0.6);
+			color           : rgb(0, 0, 0);
+		}
+
+			body > footer > div:last-of-type > strong {
+				font-family: Bold;
+			}
+
+			body > footer > div:last-of-type > a {
+				font-size      : 0.85em;
+				text-decoration: none;
+				color          : rgb(0, 0, 0);
+			}
+
+				body > footer > div:last-of-type > a:hover {
+					color: rgb(234, 0, 0);
+				}
+
+.modal {
+	width           : 100%;
+	height          : 100%;
+	background-color: rgba(0, 0, 0, 0.75);
+	position        : fixed;
+	top             : 0px;
+	left            : 0px;
+	z-index         : 300;
+	display         : flex;
+	align-items     : center;
+	justify-content : center;
+}
+
+	.modal > .modal-body {
+		width           : 35%;
+		background-color: rgb(255, 255, 255);
+		border          : 1px solid rgb(220, 220, 220);
+		position        : relative;
+	}
+
+		.modal > .modal-body > a {
+			display         : flex;
+			align-items     : center;
+			justify-content : center;
+			width           : 40px;
+			height          : 40px;
+			position        : absolute;
+			right           : -20px;
+			top             : -20px;
+			background-color: rgb(220, 220, 220);
+			border-radius   : 50%;
+		}
+
+		.modal > .modal-body > a:hover {
+			background-color: rgb(120, 120, 120);
+		}
+
+			.modal > .modal-body > a:hover > span {
+				background-color: rgb(0, 0, 0);
+			}
+
+			.modal > .modal-body > a > span {
+				display         : block;
+				width           : 1px;
+				height          : 50%;
+				position        : absolute;
+				background-color: rgb(255, 255, 255);
+				transition      : all 0.3s ease-out;
+			}
+
+			.modal > .modal-body > a > span:first-of-type {
+				transform: rotate(45deg);
+			}
+
+			.modal > .modal-body > a > span:last-of-type {
+				transform: rotate(-45deg);
+			}
+
+		.modal > .modal-body > span {
+			font-family  : Bold;
+			font-size    : 1.5em;
+			display      : block;
+			width        : 100%;
+			border-bottom: 1px solid rgb(220, 220, 220);
+			padding      : 16px;
+		}
+
+		.modal > .modal-body > div {
+			width     : 100%;
+			padding   : 16px;
+			text-align: justify;
+		}
+
+			.modal > .modal-body > div > img {
+				width        : 50%;
+				margin       : auto;
+				margin-bottom: 16px;
+			}
+
+			.modal > .modal-body > div > ul > span {
+				display      : block;
+				margin-bottom: 8px;
+			}
+
+			.modal > .modal-body > div > ul > li {
+				margin-left  : 16px;
+				margin-bottom: 4px;
+			}
+
+			.modal > .modal-body > div > ul > li:last-of-type {
+				margin-bottom: 0px;
+			}
+
+@media screen and (max-width: 1440px) {
+	body > nav > div {
+		width: 85%;
+	}
+
+	body > header > div > h1 {
+		font-size: 3em;
+	}
+
+	#nosotros > div {
+		width: 85%;
+	}
+
+	#contacto > div {
+		width: 85%;
+	}
+
+	.modal > .modal-body {
+		width: 50%;
+	}
+}
+
+@media all and (orientation: landscape) and (max-width: 1370px) {
+	body > nav > div {
+		width: 90%;
+	}
+
+	body > header {
+		height: 75vh;
+	}
+
+		body > header > div > span {
+			text-shadow: 0 0 5px rgb(128, 255, 255), 0 0 1px rgb(128, 255, 255);
+		}
+
+	#nosotros > div {
+		width: 90%;
+	}
+
+	#techs > div {
+		width: 90%;
+	}
+
+	#tecnologias > div > div > div:last-of-type > ul > li > a {
+		font-size: 0.85em;
+	}
+
+	#tecnologias > div > span {
+		white-space: pre-line;
+	}
+
+	#contacto > div {
+		width: 90%;
+	}
+}
+
+@media all and (orientation: landscape) and (max-width: 1030px) {
+	body > nav > div {
+		width: 95%;
+	}
+
+		body > nav > div > ul > li > a {
+			font-size: 0.85em;
+		}
+
+	body > header > div > div > div > div > h4 {
+		font-size: 3em;
+	}
+
+	#nosotros {
+		background-size: cover;
+	}
+
+		#nosotros > div {
+			width          : 95%;
+			display        : flex;
+			justify-content: flex-end;
+		}
+
+			#nosotros > div > div {
+				width: 50%;
+			}
+
+	#contacto > div {
+		width: 95%;
+	}
+
+	#productos {
+		    padding: 0px 16px 80px 16px;
+	}
+
+		#productos > div:nth-of-type(1) {
+			margin-bottom: 16px;
+		}
+
+	#tecnologias > div > div > div:last-of-type > ul > li {
+		font-size: 0.75em;
+		padding  : 8px 16px;
+	}
+}
+
+@media all and (orientation: landscape) and (max-width: 740px) {
+	body > button {
+		display: block;
+	}
+
+	body > nav {
+		height    : 100vh;
+		margin-top: -100vh;
+	}
+
+		body > nav > div {
+			justify-content: center;
+			flex-direction : column;
+		}
+
+			body > nav > div > a {
+				margin-bottom: 32px;
+			}
+
+				body > nav > div > a > img {
+					margin: auto;
+				}
+
+			body > nav > div > ul {
+				flex-direction: column;
+			}
+
+	body > header {
+		height: 100vh;
+	}
+
+		body > header > div > h1 {
+			font-size: 2em;
+			margin-top: 0px;
+		}
+
+		body > header > div > span {
+			font-size: 1em;
+		}
+
+	#logos > div {
+		width: 95%;
+	}
+
+	#nosotros {
+		background-image: none;
+	}
+
+		#nosotros > div {
+			width: 95%;
+		}
+
+			#nosotros > div > div {
+				width: 100%;
+			}
+
+	#tecnologias > ol {
+		flex-direction: row;
+		bottom        : 40px;
+		right         : 20px;
+	}
+
+		#tecnologias > ol > li {
+			margin-bottom: 0px;
+			margin-right : 12px;
+		}
+
+		#tecnologias > ol > li:last-of-type {
+			margin-right: 0px;
+		}
+
+		#tecnologias > div > div > div {
+			width: 100%;
+		}
+
+		#tecnologias > div > div > div:first-of-type > img {
+			width: 95%;
+		}
+
+		#tecnologias > div > div > div:last-of-type {
+			padding: 40px;
+		}
+
+	#tecnologias > div > span {
+		width      : 80%;
+		margin     : auto;
+		white-space: normal;
+	}
+
+	#productos > div:nth-of-type(2) {
+		margin-bottom: 16px;
+	}
+
+	#productos > div:nth-of-type(n+2) {
+		width: 100%;
+	}
+
+	#contacto > div:before {
+		display: none;
+	}
+
+		#contacto > div > div > ul {
+			width: 100%;
+			margin-bottom: 40px;
+		}
+
+		#contacto > div > div > form {
+			width: 100%;
+		}
+
+	body > footer > div:last-of-type {
+		font-size: 0.75em;
+	}
+}
+
+@media all and (orientation: portrait) and (max-width: 1030px) {
+	body > nav > div {
+		width: 95%;
+	}
+
+	body > header {
+		height: 50vh;
+	}
+
+		body > header > div > span {
+			text-shadow: 0 0 5px rgb(128, 255, 255), 0 0 1px rgb(128, 255, 255);
+		}
+
+	#nosotros {
+		background-image: none;
+	}
+
+		#nosotros > div {
+			width: 95%;
+		}
+
+			#nosotros > div > div {
+				width: 100%;
+			}
+
+	#productos {
+		padding: 0px 16px 80px 16px;
+	}
+
+		#productos > div:nth-of-type(1) {
+			margin-bottom: 16px;
+		}
+
+	#techs {
+		background-attachment: scroll;
+		background-position  : center;
+	}
+
+		#techs > div {
+			width: 90%;
+		}
+
+	#tecnologias > div > div > div:last-of-type > ul > li > a {
+		font-size: 0.75em;
+	}
+
+	#tecnologias > div > span {
+		white-space: pre-line;
+	}
+
+	#contacto > div {
+		width: 95%;
+	}
+
+	.modal > .modal-body {
+		width: 75%;
+	}
+}
+
+@media all and (orientation: portrait) and (max-width: 770px) {
+	body > button {
+		display: block;
+	}
+
+	body > nav {
+		height       : 100vh;
+		margin-top: -100vh;
+	}
+
+		body > nav > div {
+			justify-content: center;
+			flex-direction : column;
+		}
+
+			body > nav > div > a {
+				margin-bottom: 32px;
+			}
+
+				body > nav > div > a > img {
+					margin: auto;
+				}
+
+			body > nav > div > ul {
+				flex-direction: column;
+			}
+
+	body > header > div > h1 {
+		font-size : 2.5em;
+		margin-top: 0px;
+	}
+
+	#techs > div > div {
+		column-count: auto;
+	}
+
+	#techs > div > h2 {
+		font-size: 2em;
+	}
+
+	#tecnologias > ol {
+		flex-direction: row;
+		bottom        : 40px;
+		right         : 20px;
+	}
+
+		#tecnologias > ol > li {
+			margin-bottom: 0px;
+			margin-right : 12px;
+		}
+
+		#tecnologias > ol > li:last-of-type {
+			margin-right: 0px;
+		}
+
+		#tecnologias > div > div > div {
+			width: 100%;
+		}
+
+		#tecnologias > div > div > div:first-of-type > img {
+			width: 95%;
+		}
+
+		#tecnologias > div > div > div:last-of-type {
+			padding: 40px;
+		}
+
+		#tecnologias > div > div > div:last-of-type > ul > li > a {
+			font-size: 0.75em;
+			padding  : 8px 16px;
+		}
+
+	#productos > div:nth-of-type(2) {
+		margin-bottom: 16px;
+	}
+
+	#productos > div:nth-of-type(n+2) {
+		width: 100%;
+	}
+
+	#contacto > div:before {
+		display: none;
+	}
+
+		#contacto > div > div > ul {
+			width: 100%;
+			margin-bottom: 40px;
+		}
+
+		#contacto > div > div > form {
+			width: 100%;
+		}
+
+	.modal > .modal-body {
+		width: 90%;
+	}
+
+		.modal > .modal-body > a {
+			width : 26px;
+			height: 26px;
+			right : -13px;
+			top   : -13px;
+		}
+
+		.modal > .modal-body > div > img {
+			width: 100%;
+		}
+}
+
+@media all and (orientation: portrait) and (max-width: 420px) {
+	body > button {
+		top : 16px;
+		left: 16px;
+	}
+
+	body > a {
+		bottom: 16px;
+		right : 16px;
+	}
+
+	body > header > ol {
+		bottom: 20px;
+		right : 20px;
+	}
+
+	body > header > div > h1 {
+		font-size    : 1.5em;
+		margin-bottom: 20px;
+	}
+
+	body > header > div > span {
+		font-size: 0.85em;
+	}
+
+	#logos > div {
+		width: 95%;
+	}
+
+	#nosotros > div > div > h1 {
+		font-size: 2em;
+	}
+
+	#productos > div:nth-of-type(1) {
+		height: 250px;
+	}
+
+	#productos > div:nth-of-type(n+2) > h3 {
+		font-size: 1.5em;
+	}
+
+	#tecnologias > div > span {
+		width      : 80%;
+		margin     : auto;
+		white-space: normal;
+	}
+
+	#contacto > map {
+		height: 250px;
+	}
+
+	#contacto > div > div > ul {
+		padding: 0px;
+	}
+
+	#contacto > div > div > form > div {
+		width: 100%;
+	}
+
+	body > footer > div:last-of-type {
+		font-size: 0.75em;
+	}
+}
